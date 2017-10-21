@@ -15,7 +15,25 @@
         require_once 'functions.php';
         echo GenerList(["czerwony","biały","zielony",
             "żółty","pomarańczowy"],false);
-        echo GenerTab(12, 15);
+         ?>
+        <form method="get">
+            <label>Ilosć wierszy: </label>
+            <input type="text" name="rows"/><br>
+             <label>Ilosć kolumn: </label>
+            <input type="text" name="cols"/><br>
+            <input type="submit" value="Wykonaj"/>
+        </form>
+        
+        <?php
+        if(isset($_GET['rows']) && isset($_GET['cols'])){
+            $rows = intval($_GET['rows']);
+            $cols = intval($_GET['cols']);
+            $rows = $rows<=0 || $rows>40 ? 20 : $rows;
+            $cols = $cols<=0 || $cols>40 ? 20 : $cols;
+            echo GenerTab($rows,$cols);
+        }
+        
+        
         ?>
     </body>
 </html>
