@@ -16,11 +16,11 @@
         echo GenerList(["czerwony","biały","zielony",
             "żółty","pomarańczowy"],false);
          ?>
-        <form method="get">
+        <form method="get" id="form">
             <label>Ilosć wierszy: </label>
-            <input type="text" name="rows"/><br>
+            <input type="text" name="rows" id="rows"/><br>
              <label>Ilosć kolumn: </label>
-            <input type="text" name="cols"/><br>
+            <input type="text" name="cols" id="cols"/><br>
             <input type="submit" value="Wykonaj"/>
         </form>
         
@@ -36,4 +36,12 @@
         
         ?>
     </body>
+    <script type="text/javascript">
+        window.onload = function (){
+            document.getElementById("form").onsubmit = function(){
+                var isOK = confirm("Czy jest ok");
+                return isOK;
+            }
+        }
+    </script>
 </html>
