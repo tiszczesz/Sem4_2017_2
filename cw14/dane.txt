@@ -1,0 +1,6 @@
+Anna|Żmudzka|2700
+Tomasz|Jurkiewicz|2400
+Ryszard|Gryk|3400
+Grażyna|Eryk|3200
+Karolina|Sprężyna|4500
+
