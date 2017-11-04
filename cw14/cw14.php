@@ -10,7 +10,10 @@
         <?php
         require_once 'WorkerRepository.php';
         $repo = new WorkerRepository("dane.txt");
-        print_r($repo->GetAllWorkers());
+        $workers = $repo->GetAllWorkers();
+        foreach ($workers as $item) {
+            echo $item;
+        }
         ?>
         </pre>
     </body>
