@@ -14,4 +14,16 @@ class Worker{
         . "Imię: {$this->imie} Nazwisko: {$this->nazwisko}"
         . " Pensja: {$this->pensja}</div>";
     }
+    public function getImie(){
+        return $this->imie;
+    }
+    public function getNazwisko() {
+        return $this->nazwisko;
+    }
+
+    public function getPensja() {
+        return $this->pensja;
+    }
+
+
 }

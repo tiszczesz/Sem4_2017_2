@@ -6,15 +6,16 @@
         <title></title>
     </head>
     <body>
-        <pre>
+        
         <?php
-        require_once 'WorkerRepository.php';
+        require_once 'WorkerToHTML.php';
         $repo = new WorkerRepository("dane.txt");
         $workers = $repo->GetAllWorkers();
         foreach ($workers as $item) {
             echo $item;
         }
+        echo WorkerToHTML::WorkersToTable($workers);
         ?>
-        </pre>
+        
     </body>
 </html>
