@@ -3,4 +3,5 @@ Tomasz|Jurkiewicz|2400
 Ryszard|Gryk|3400
 Grażyna|Eryk|3200
 Karolina|Sprężyna|4500
-
+Ryszard|Testowy|3400
+fff|fff|1212

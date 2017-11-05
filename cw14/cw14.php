@@ -5,8 +5,7 @@
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
-        
+    <body>        
         <?php
         require_once 'WorkerToHTML.php';
         $repo = new WorkerRepository("dane.txt");
@@ -15,7 +14,9 @@
             echo $item;
         }
         echo WorkerToHTML::WorkersToTable($workers);
-        ?>
-        
+        ?>       
+        <div>
+            <a href="dodaj.html">Dodaj pracownika</a>
+        </div>
     </body>
 </html>

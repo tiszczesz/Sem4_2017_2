@@ -21,4 +21,13 @@ class WorkerRepository{
         return new Worker(trim($temp[0]),
                 trim($temp[1]), trim($temp[2]));
     }
+    public function AddWorkerToFile(Worker $w){
+        $f = fopen($this->filename, 'a');
+        if($f){
+            $line = $w->getImie().'|'.$w->getNazwisko().'|'
+                    .$w->getPensja().PHP_EOL;
+            fwrite($f, $line);
+            fclose($f);
+        }
+    }
 }
