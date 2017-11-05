@@ -10,5 +10,8 @@
         $dane = getAllWorkers();
         echo WorkersToTable($dane);
         ?>
+        <div>
+            <a href="dodaj.html">Dodaj pracownika</a>
+        </div>
     </body>
 </html>

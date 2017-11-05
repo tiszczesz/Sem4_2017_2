@@ -42,3 +42,13 @@ function WorkersToTable(array $workers) {
     }
     return $html."</table>";
 }
+function addWorkerToDB($imie,$nazwisko,$pensja){
+    $conn = getConnection();
+    if($conn==NULL){return false;}
+    $sqlQuery = "INSERT INTO workers(imie,nazwisko,pensja)"
+            . " VALUES('{$imie}','{$nazwisko}',{$pensja})";
+    $result = $conn->query($sqlQuery);
+   // var_dump($result);
+    $conn->close();
+    return $result;
+}
