@@ -30,7 +30,8 @@ function getAllWorkers() {
 function WorkersToTable(array $workers) {
     $html = "<table>\n";
     $html .= "<tr><th>Lp</th><th>Imię</th>"
-            . "<th>Nazwisko</th><th>Pensja</th></tr>\n";
+            . "<th>Nazwisko</th><th>Pensja</th>"
+            . "<th>Operacje</th></tr>\n";
     $i = 0;
     foreach ($workers as $row) {
         $i++;
@@ -38,7 +39,9 @@ function WorkersToTable(array $workers) {
         $html .= "\t<td>{$i}</td>\n"
                 . "\t<td>{$row['imie']}</td>\n"
                 . "\t<td>{$row['nazwisko']}</td>\n"
-                . "\t<td>{$row['pensja']}</td>\n</tr>";
+                . "\t<td>{$row['pensja']}</td>\n"
+                . "<td><a href='usun.php?id={$row['id']}'>Usuń</a>"
+                . " <a href='edytuj.php?id={$row['id']}'>Edytuj</a></td</tr>";
     }
     return $html."</table>";
 }
