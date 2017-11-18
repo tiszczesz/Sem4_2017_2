@@ -13,7 +13,7 @@
     const warunek = 18;
     if($wiek>=warunek){
     	echo "<p>Witaj {$imie} {$nazwisko} zapraszamy "
-    	. " do {warunek} naszego serwisu... </p>\n";
+    	. " do naszego serwisu... </p>\n";
     }else{
     	echo "<p>Witaj {$imie} {$nazwisko} "
     	. " to serwis nie dla Ciebie </p>\n";
