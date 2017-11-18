@@ -42,10 +42,17 @@
                 $sql = "SELECT nazwa,cena FROM uslugi";
                 $result = $conn->query($sql);
                 while($row=$result->fetch_assoc()){
-                    echo "<p>{$row['nazwa']} {$row['cena']}</p>";
+                    echo "<p class='info'>{$row['nazwa']} {$row['cena']}</p>";
                 }
-                $conn->close();
-            ?>
+                //$conn->close();
+             $result = $conn->query("SELECT MIN(cena) FROM uslugi");
+             $row = $result->fetch_row();
+            echo "<p >Najniższe ceny już od: {$row[0]}zł</p>";
+            $conn->close();
+                ?>
+            <div>
+                <a href="dodaj.php">Dodaj nową usługę</a>
+            </div>
         </section>       
     </body>
 </html>

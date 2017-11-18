@@ -22,3 +22,7 @@ body{
 }
 h3{    color: white;}
 img{    float: left;}
+p.info{
+    margin-right: 30px;
+    text-align: right;
+}
