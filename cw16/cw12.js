@@ -8,8 +8,14 @@ function start() {
 
     function Oblicz() {
         var ilosci = [];
+        document.getElementById("wynik").innerHTML="";        
         for (var i = 0; i < dane.length; i++) {
-            ilosci.push(document.getElementById("il" + i).value);
+            var ilosc = parseFloat(document.getElementById("il" + i).value);
+            if(isNaN(ilosc) || ilosc<0){
+                document.getElementById("wynik").innerHTML = "Błędne dane";
+                return;
+            }
+            ilosci.push(ilosc);
         }
         var total = 0;
         for (var i = 0; i < dane.length; i++) {
@@ -28,8 +34,9 @@ function ToTable(dane) {
     var html = "<table>";
     for (var i = 0; i < dane.length; i++) {
         html += "<tr><td class='nazwa'>" + dane[i][0] + "</td><td class='cena'>"
-                + (dane[i][1]).toFixed(2) + " zł</td><td><input type='number' id='il"
-                + i + "'/> szt.</td></tr>";
+                + (dane[i][1]).toFixed(2)
+                + " zł</td><td><input type='number' id='il" 
+                + i + "' value='0'/> szt.</td></tr>";
     }
     return html + "</table>";
 }
