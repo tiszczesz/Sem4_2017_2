@@ -61,8 +61,8 @@
                     }
                     echo "</select>";
                     $conn->close();
-                    echo 'Sesja: '. session_id();
-                    print_r($_SESSION);
+                   // echo 'Sesja: '. session_id();
+                   // print_r($_SESSION);
                     ?>
                 </div>
                 <div>
